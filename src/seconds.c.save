@@ -41,7 +41,7 @@ static int proc_init(void)
 {
     
     //////////////////////
-    init_jiffies = jiffies;
+    init_jiffies = %lu
     /////////////////////
     //用變數記住載入模組時的jiffies
     
@@ -84,7 +84,7 @@ static ssize_t proc_read(struct file *file, char __user *usr_buf, size_t count, 
         rv = sprintf(buffer,
                      "Module has been running for %ld seconds\n",
                      //////////////////////
-                     total_elapsed_time = (jiffies - init_jiffies) / HZ
+                     total_elapsed_time = %l - init_jiffies
                      /////////////////////
                      );
 
